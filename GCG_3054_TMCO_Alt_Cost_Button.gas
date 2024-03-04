@@ -1,0 +1,22 @@
+Program.Sub.ScreenSU.Start
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' TMCO
+' 11/21/08
+' Updated 1/15/09 to not run on a part view
+' Populate hook on Inventory Master (10120)
+
+Function.Intrinsic.Control.If(Variable.caller.Switches,=,"V")
+	Function.Intrinsic.control.End
+Function.Intrinsic.Control.EndIf
+
+Variable.Passed.000068.Set("Alt Cost Calc")
+
+Program.Sub.Main.End
+
+
