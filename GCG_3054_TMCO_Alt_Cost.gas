@@ -1,0 +1,268 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("Alt Cost Calculator")
+gui.Form1..size(3615,4860)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,form1_unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(True)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.txtmatlcost.create(textbox)
+gui.Form1.txtmatlcost.text("")
+gui.Form1.txtmatlcost.visible(True)
+gui.Form1.txtmatlcost.size(1215,300)
+gui.Form1.txtmatlcost.zorder(0)
+gui.Form1.txtmatlcost.position(1845,345)
+gui.Form1.txtmatlcost.enabled(True)
+gui.Form1.txtmatlcost.alignment(0)
+gui.Form1.txtmatlcost.fontname("Arial")
+gui.Form1.txtmatlcost.fontsize(8)
+gui.Form1.txtmatlcost.BackColor(-2147483643)
+gui.Form1.lbl1.create(label)
+gui.Form1.lbl1.caption("What is the material cost/lb?")
+gui.Form1.lbl1.backstyle(0)
+gui.Form1.lbl1.visible(True)
+gui.Form1.lbl1.size(1200,420)
+gui.Form1.lbl1.zorder(0)
+gui.Form1.lbl1.position(200,300)
+gui.Form1.lbl1.enabled(True)
+gui.Form1.lbl1.alignment(0)
+gui.Form1.lbl1.fontname("Arial")
+gui.Form1.lbl1.fontsize(8)
+gui.Form1.lbl1.BackColor(-2147483633)
+gui.Form1.lbl2.create(label)
+gui.Form1.lbl2.caption("What percent markup do you want on the material?")
+gui.Form1.lbl2.backstyle(0)
+gui.Form1.lbl2.visible(True)
+gui.Form1.lbl2.size(1500,660)
+gui.Form1.lbl2.zorder(0)
+gui.Form1.lbl2.position(200,915)
+gui.Form1.lbl2.enabled(True)
+gui.Form1.lbl2.alignment(0)
+gui.Form1.lbl2.fontname("Arial")
+gui.Form1.lbl2.fontsize(8)
+gui.Form1.lbl2.BackColor(-2147483633)
+gui.Form1.txtmarkup.create(textbox)
+gui.Form1.txtmarkup.text("")
+gui.Form1.txtmarkup.visible(True)
+gui.Form1.txtmarkup.size(1215,300)
+gui.Form1.txtmarkup.zorder(0)
+gui.Form1.txtmarkup.position(1845,1045)
+gui.Form1.txtmarkup.enabled(True)
+gui.Form1.txtmarkup.borderstyle(1)
+gui.Form1.txtmarkup.alignment(0)
+gui.Form1.txtmarkup.fontname("Arial")
+gui.Form1.txtmarkup.fontsize(8)
+gui.Form1.txtmarkup.BackColor(-2147483643)
+gui.Form1.cmdProcess.create(button)
+gui.Form1.cmdProcess.caption("Process")
+gui.Form1.cmdProcess.visible(True)
+gui.Form1.cmdProcess.size(855,375)
+gui.Form1.cmdProcess.zorder(0)
+gui.Form1.cmdProcess.position(1215,1775)
+gui.Form1.cmdProcess.enabled(True)
+gui.Form1.cmdProcess.fontname("Arial")
+gui.Form1.cmdProcess.fontsize(8)
+gui.Form1.cmdProcess.event(click,cmdprocess_click)
+gui.Form1.lbl3.create(label)
+gui.Form1.lbl3.caption("Result:")
+gui.Form1.lbl3.backstyle(0)
+gui.Form1.lbl3.visible(True)
+gui.Form1.lbl3.size(720,255)
+gui.Form1.lbl3.zorder(0)
+gui.Form1.lbl3.position(545,2645)
+gui.Form1.lbl3.enabled(True)
+gui.Form1.lbl3.alignment(0)
+gui.Form1.lbl3.fontname("Arial")
+gui.Form1.lbl3.fontsize(8)
+gui.Form1.lbl3.BackColor(-2147483633)
+gui.Form1.txtresult.create(textbox)
+gui.Form1.txtresult.text("")
+gui.Form1.txtresult.visible(True)
+gui.Form1.txtresult.size(1215,300)
+gui.Form1.txtresult.zorder(0)
+gui.Form1.txtresult.position(1200,2575)
+gui.Form1.txtresult.enabled(False)
+gui.Form1.txtresult.borderstyle(1)
+gui.Form1.txtresult.alignment(0)
+gui.Form1.txtresult.fontname("Arial")
+gui.Form1.txtresult.fontsize(8)
+gui.Form1.txtresult.BackColor(-2147483643)
+gui.Form1.lbl4.create(label)
+gui.Form1.lbl4.caption("Save to Inventory?")
+gui.Form1.lbl4.backstyle(0)
+gui.Form1.lbl4.visible(True)
+gui.Form1.lbl4.size(1470,255)
+gui.Form1.lbl4.zorder(0)
+gui.Form1.lbl4.position(825,3200)
+gui.Form1.lbl4.enabled(True)
+gui.Form1.lbl4.alignment(0)
+gui.Form1.lbl4.fontname("Arial")
+gui.Form1.lbl4.fontsize(8)
+gui.Form1.lbl4.BackColor(-2147483633)
+gui.Form1.cmdYes.create(button)
+gui.Form1.cmdYes.caption("Yes")
+gui.Form1.cmdYes.visible(True)
+gui.Form1.cmdYes.size(855,375)
+gui.Form1.cmdYes.zorder(0)
+gui.Form1.cmdYes.position(400,3600)
+gui.Form1.cmdYes.enabled(True)
+gui.Form1.cmdYes.fontname("Arial")
+gui.Form1.cmdYes.fontsize(8)
+gui.Form1.cmdYes.event(click,cmdyes_click)
+gui.Form1.cmdNo.create(button)
+gui.Form1.cmdNo.caption("No")
+gui.Form1.cmdNo.visible(True)
+gui.Form1.cmdNo.size(855,375)
+gui.Form1.cmdNo.zorder(0)
+gui.Form1.cmdNo.position(1700,3615)
+gui.Form1.cmdNo.enabled(True)
+gui.Form1.cmdNo.fontname("Arial")
+gui.Form1.cmdNo.fontsize(8)
+gui.Form1.cmdNo.event(click,cmdno_click)
+gui.Form1.txtmatlcost.tabstop(True)
+gui.Form1.txtmatlcost.tabindex(1)
+gui.Form1.txtmarkup.tabstop(True)
+gui.Form1.txtmarkup.tabindex(2)
+gui.Form1.cmdProcess.tabstop(True)
+gui.Form1.cmdProcess.tabindex(3)
+gui.Form1.cmdYes.tabstop(True)
+gui.Form1.cmdYes.tabindex(4)
+gui.Form1.cmdNo.tabstop(True)
+gui.Form1.cmdNo.tabindex(5)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+' TMCO
+' 11/18/08
+' Updated 1/15/09 to not run on a part view
+' Script 1 button on Inventory Master (10210)
+
+Function.Intrinsic.Control.If(Variable.caller.Switches,=,"V")
+	Function.Intrinsic.control.End
+Function.Intrinsic.Control.EndIf
+
+	Function.Odbc.Connection!Con.Openconnection(Variable.Ambient.pdsn,Variable.Ambient.PUser,Variable.Ambient.PPass)
+
+	Gui.Form1.cmdNo.Enabled(0)
+	Gui.Form1.cmdYes.Enabled(0)
+
+	Gui.Form1..Show
+
+
+Program.Sub.Main.End
+
+program.sub.cmdprocess_click.start
+Variable.Local.sPart.Declare(String)
+Variable.Local.sLoc.Declare(String)
+Variable.Local.sSql.Declare(String)
+Variable.Local.fPurchConv.Declare(Float)
+Variable.Local.fMatMarkup.Declare(Float)
+Variable.Local.fAltCost.Declare(Float)
+Variable.Local.fMarkup.Declare(Float)
+Variable.Local.fBracket.Declare(Float)
+Variable.Local.fMatCost.Declare(Float)
+Variable.Local.fFactor.Declare(Float)
+Variable.Local.fResult.Declare(Float)
+
+
+Variable.Local.fPurchConv.Set(0)
+
+Function.Intrinsic.string.gsspartstring(Variable.passed.000007,Variable.passed.000008,Variable.local.spart)
+Variable.Local.sLoc.Set(Variable.Passed.000009)
+
+Function.intrinsic.String.Concat("Select part, location, factor_conversion from v_inventory_mstr where part = '",Variable.local.sPart,"' and location = '",Variable.local.sLoc,"'",Variable.local.sSql)
+
+Function.ODBC.Connection!Con.OpenRecordsetRO("rst1",Variable.Local.sSql)
+Function.Intrinsic.Control.If(Variable.ODBC.Con!rst1.EOF,<>,True)
+	Variable.Local.fPurchConv.Set(Variable.ODBC.Con!rst1.FieldVal!factor_conversion)
+Function.Intrinsic.Control.EndIf
+
+'function.Intrinsic.String.Concat("Select material_6 from v_markup_pct"
+Function.odbc.Connection!Con.OpenRecordsetRO("rst2","select material_6 from v_markup_pct")
+Function.Intrinsic.Control.If(Variable.ODBC.Con!rst2.EOF,<>,True)
+	Variable.Local.fMatMarkup.Set(Variable.odbc.Con!rst2.FieldVal!material_6)
+Function.Intrinsic.Control.EndIf
+Function.ODBC.Con!rst2.Close
+
+Function.Intrinsic.Control.If(Variable.Local.fPurchConv,>,0)
+	Function.Intrinsic.Math.Mult(Variable.Screen.Form1!txtmarkup.text,.01,Variable.Local.fMarkup)
+	Function.Intrinsic.Math.Add(Variable.Local.fMarkup,1,Variable.Local.fBracket)
+	Function.Intrinsic.Math.sub(Variable.Local.fMatMarkup,Variable.Local.fBracket,Variable.Local.fBracket)
+	Function.Intrinsic.Math.Sub(1,Variable.Local.fBracket,Variable.Local.fBracket)
+	Variable.Local.fMatCost.Set(Variable.Screen.Form1!txtmatlcost.Text)
+	Function.intrinsic.math.div(1,Variable.local.fPurchConv,Variable.local.fFactor)
+	Function.intrinsic.math.mult(Variable.local.fFactor,Variable.local.fMatCost,Variable.local.fBracket,Variable.local.fAltCost)
+	Function.Intrinsic.Math.Round(Variable.Local.fAltCost,4,Variable.Local.fResult)
+	Gui.form1.txtresult.Text(Variable.Local.fResult)
+	Gui.Form1.cmdNo.Enabled(1)
+	Gui.Form1.cmdYes.Enabled(1)
+Function.Intrinsic.Control.Else
+	Function.Intrinsic.UI.Msgbox("Purchasing conversion factor is 0 for this part, calculation not possible.")
+	Function.Intrinsic.Control.CallSub("form1_unload")
+Function.Intrinsic.Control.EndIf
+
+Function.ODBC.Con!rst1.Close
+
+program.sub.cmdprocess_click.end
+
+program.sub.form1_unload.start
+
+Function.Intrinsic.Control.End
+
+Function.ODBC.Connection!Con.close
+
+program.sub.form1_unload.end
+
+program.sub.cmdyes_click.start
+Variable.Local.sSql.Declare(String)
+Variable.Local.sPart.Declare(String)
+Variable.Local.sLoc.Declare(String)
+
+
+Function.Intrinsic.string.gsspartstring(Variable.passed.000007,Variable.passed.000008,Variable.local.spart)
+Variable.Local.sLoc.Set(Variable.Passed.000009)
+
+Function.intrinsic.String.Concat("Select amt_alt_cost from inventory_mstr where part = '",Variable.local.sPart,"' and location = '",Variable.local.sLoc,"'",Variable.local.sSql)
+
+Function.ODBC.Connection!Con.OpenRecordsetRW("rst1",Variable.Local.sSql)
+Function.Intrinsic.Control.If(Variable.ODBC.Con!rst1.EOF,<>,True)
+	Function.odbc.con!rst1.set!AMT_ALT_COST(Variable.screen.form1!txtresult.text)
+	Function.ODBC.Con!rst1.Update
+Function.intrinsic.control.endif
+Function.ODBC.Con!rst1.Close
+
+Function.intrinsic.ui.msgbox("Alt Cost updated")
+
+Variable.Passed.000019.Set(Variable.Screen.Form1!txtresult.Text)
+
+Function.Intrinsic.Control.CallSub("form1_unload")
+
+
+	
+program.sub.cmdyes_click.end
+
+program.sub.cmdno_click.start
+Function.Intrinsic.Control.CallSub("form1_unload")
+
+
+program.sub.cmdno_click.end
+
+
